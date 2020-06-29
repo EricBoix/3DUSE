@@ -379,12 +379,6 @@ void MainWindow::openRecentFile()
 ////////////////////////////////////////////////////////////////////////////////
 bool MainWindow::loadFile( const QString& filepath )
 {
-   // date check
-   if ( QDate::currentDate() > QDate( 2019, 12, 31 ) )
-   {
-      QMessageBox( QMessageBox::Critical, "Error", "Expired" ).exec();
-      return false;
-   }
 
    QApplication::setOverrideCursor( Qt::WaitCursor );
    QSettings settings( "liris", "virtualcity" );
